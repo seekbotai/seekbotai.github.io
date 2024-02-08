@@ -8,7 +8,7 @@ export default function Header(props) {
           <a>
             <span>SeekBot</span>
           </a>
-          <span className="slogan">Make Life Productive</span>
+          <span className="slogan">Make Life More Productive</span>
         </h1>
       </div>
     </header>

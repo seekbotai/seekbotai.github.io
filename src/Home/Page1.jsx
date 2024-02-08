@@ -1,14 +1,14 @@
-import React from 'react';
-import QueueAnim from 'rc-queue-anim';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { Row, Col } from 'antd';
-import { page1 } from './data';
+import React from "react";
+import QueueAnim from "rc-queue-anim";
+import OverPack from "rc-scroll-anim/lib/ScrollOverPack";
+import { Row, Col } from "antd";
+import { page1 } from "./data";
 
 export default function Page1() {
-  const children = page1.map((d, i) => (
+  const children = page1.map(d => (
     <QueueAnim
       component={Col}
-      key={i}
+      key={d.title}
       type="bottom"
       className="col"
       componentProps={{ span: 8 }}
@@ -19,11 +19,17 @@ export default function Page1() {
     </QueueAnim>
   ));
   return (
-    <div className="home-layout-wrapper home-func-wrapper" id="home-func" >
+    <div className="home-layout-wrapper home-func-wrapper" id="home-func">
       <h2>What SeekBot can do</h2>
       <i className="line" />
       <OverPack className="home-layout" location="home-func" playScale={0.4}>
-        <QueueAnim className="home-func" type="bottom" key="home-func" ease="easeOutQuart" leaveReverse>
+        <QueueAnim
+          className="home-func"
+          type="bottom"
+          key="home-func"
+          ease="easeOutQuart"
+          leaveReverse
+        >
           <QueueAnim
             key="content"
             component={Row}
@@ -34,5 +40,6 @@ export default function Page1() {
           </QueueAnim>
         </QueueAnim>
       </OverPack>
-    </div>);
+    </div>
+  );
 }
