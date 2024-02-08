@@ -1,0 +1,49 @@
+header {
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    font-size: 14px;
+    padding: 0 24px;
+    width: 1152px;
+    margin: 0 auto;
+    h1.logo {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 157px;
+        width: 1px;
+        height: 12px;
+        background: #999;
+      }
+      a {
+        display: block;
+        width: 147px;
+        height: 32px;
+        background: url(./bitsky.svg) no-repeat 0 50%;
+        background-size: 32px 32px;
+        span{
+          position: relative;
+          top: -5px;
+          padding-left: 42px;
+        }
+      }
+      span.slogan {
+        position: absolute;
+        font-size: 14px;
+        font-weight: 400;
+        top: 6px;
+        left: 167px;
+        color: rgba(0,0,0,.65);
+        white-space: nowrap;
+      }
+    }
+  }
+}
